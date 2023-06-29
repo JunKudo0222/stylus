@@ -8,7 +8,38 @@
 
 @-moz-document regexp("^https://twitter.com(?!.*/followers$).*$") {
     /* ここにコードを挿入... */
-    *{
+    div[data-testid="sidebarColumn"]{
+display:none;
+    }
+    header[role="banner"]{
+        display:none;
+    }
+    nav[aria-label="Profile timelines"]{
+        display:none;
+    }
+    div:has(>div[data-testid="UserName"]){
+        display:none;
+    }
+    
+    div[data-testid="cellInnerDiv"]:not(:first-child){
+        display:none;
+    }
+    div[data-testid="tweetText"]{
+        display:none;
+    }
+    div[role="group"]>div>div:not([data-testid="like"]){
+        display:none;
+    }
+    div[aria-labelledby]{
+        display:none;
+    }
+    a[role="link"]{
+        display:none;
+    }
+    div[aria-label="Home timeline"]>div:first-child{
+        display:none;
+    }
+    div[data-testid="socialContext"]{
         display:none;
     }
 }
