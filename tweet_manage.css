@@ -1,0 +1,14 @@
+/* ==UserStyle==
+@name           twitter.com - 2023/6/30 1:21:14
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document regexp("^https://twitter.com(?!.*/followers$).*$") {
+    /* ここにコードを挿入... */
+    *{
+        display:none;
+    }
+}

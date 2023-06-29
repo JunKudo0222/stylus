@@ -1,0 +1,75 @@
+/* ==UserStyle==
+@name           twitter.com - 2023/6/29 19:17:03
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document regexp("https://twitter.com/.*followers$") {
+    /* ここにコードを挿入... */
+div[data-testid="sidebarColumn"]{
+    display:none;
+    
+}
+div[data-testid="DMDrawer"]{
+    display:none;
+}
+
+header[role="banner"]{
+    display:none;
+    
+}
+div[dir="auto"]{
+    display:none;
+}
+h2[dir="ltr"]{
+    display:none;
+}
+div[data-testid^=UserAvatar-Container-]{
+    display:none;
+    
+}
+div[data-testid$="-follow"] {
+  display:none;
+}
+
+a[role="link"]:not([tabindex]){
+    display:none;
+}
+
+div[data-testid="cellInnerDiv"]{
+    height:8px;
+    
+}
+div[role="presentation"]{
+    display:none;
+}
+div[aria-label="Back"]{
+    display:none;
+}
+div[dir="ltr"][style]{
+    display:none;
+}
+a[href="/i/keyboard_shortcuts"]{
+    display:none;
+}
+div[data-testid="pillLabel"]{
+    display:none;
+}
+a[aria-selected="true"]{
+    display:none;
+}
+h1[id="accessible-list-0"]{
+    display:none;
+}
+h1[id="accessible-list-1"]{
+    display:none;
+}
+
+div[aria-label="Home timeline"]>div{
+        display:none;
+    }
+}
+
+
