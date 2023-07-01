@@ -1,19 +1,16 @@
 /* ==UserStyle==
-@name           twitter.com - 2023/6/30 1:21:14
+@name           twitter.com - 2023/6/30 5:02:49
 @namespace      github.com/openstyles/stylus
 @version        1.0.0
 @description    A new userstyle
 @author         Me
 ==/UserStyle== */
 
-@-moz-document regexp("^https://twitter.com(?!.*/followers$)(?!.*/likes$).*$") {
+@-moz-document regexp("https://twitter.com/.*likes$") {
     /* ここにコードを挿入... */
     div[data-testid="sidebarColumn"]{
 display:none;
     }
-    div[data-testid="DMDrawer"]{
-    display:none;
-}
     header[role="banner"]{
         display:none;
     }
@@ -24,31 +21,55 @@ display:none;
         display:none;
     }
     
-    div[data-testid="cellInnerDiv"]:not(:first-child){
-        display:none;
-    }
+    
     div[data-testid="tweetText"]{
         display:none;
     }
-    div[role="group"]>div>div:not([data-testid="like"]){
+    div[role="group"]>div>div{
         display:none;
     }
     div[aria-labelledby]{
         display:none;
     }
-    a[role="link"]{
-        display:none;
-    }
+   div[data-testid^=UserAvatar-Container-]{
+    display:none;
+    
+}
+    a[role="link"]:not([tabindex]){
+    display:none;
+}
     div[aria-label="Home timeline"]>div:first-child{
         display:none;
     }
     div[data-testid="socialContext"]{
         display:none;
     }
-    div[data-testid="emptyState"]{
+    div[data-testid="DMDrawer"]{
+    display:none;
+}
+    div[data-testid="cellInnerDiv"]{
+    height:2px;
+    
+}
+    a[aria-hidden="true"]{
         display:none;
     }
-    div[dir="ltr"][style]>span{
+    div[role="button"]{
+        display:none;
+    }
+    a[href="/i/keyboard_shortcuts"]{
+    display:none;
+}
+    h2[aria-level="2"]{
+        display:none;
+    }
+    h1[aria-level="1"]{
+        display:none;
+    }
+    div[aria-hidden="true"]>span{
+        display:none;
+    }
+    div[dir="ltr"][id^="id__"] {
         display:none;
     }
 }
